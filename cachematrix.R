@@ -35,7 +35,7 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
     ## Retrieve the inverted matrix value from the cachableMatrix object
     invM <- x$getInverse()
-    ## If the inverted matrix it's not in the cache, 
+    ## If the inverted matrix it's not in the cache or it's changed, 
     ## then computes it and adds it to the chache.
     if(is.null(invM)){
         mToInvert <- x$get()
